@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<LangVersion>preview</LangVersion>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="mwmwrespawnequipmentbundle" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="mwmwrespawnequipmentbundle" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BepInEx.Analyzers" Version="1.0.*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+
+		<PackageReference Include="BepInEx.Core" Version="5.4.21" />
+
+		<PackageReference Include="R2API.DamageType" Version="*" />
+
+		<PackageReference Include="R2API.Items" Version="*" />
+		<PackageReference Include="R2API.Language" Version="*" />
+		<PackageReference Include="R2API.Networking" Version="*" />
+		<PackageReference Include="R2API.Prefab" Version="*" />
+		<PackageReference Include="R2API.RecalculateStats" Version="*" />
+		<PackageReference Include="Rune580.Mods.RiskOfRain2.RiskOfOptions" Version="*" />
+
+		<PackageReference Include="UnityEngine.Modules" Version="2021.3.33" IncludeAssets="compile" />
+		<PackageReference Include="RiskOfRain2.GameLibs" Version="1.5.0-r.1" />
+		<PackageReference Include="MMHOOK.RoR2" Version="*" NoWarn="NU1701" />
+	</ItemGroup>
+</Project>
