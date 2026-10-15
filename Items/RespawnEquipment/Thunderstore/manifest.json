@@ -1,6 +1,6 @@
 ﻿{
 	"name": "RespawnEquipment",
-	"version_number": "1.0.0",
+	"version_number": "1.0.1",
 	"website_url": "https://github.com/mwoiii/misc-ror2-mods",
 	"description": "Adds the \"Umbrous Transceiver\", an equipment that lets you swap your survivor!",
 	"dependencies": [

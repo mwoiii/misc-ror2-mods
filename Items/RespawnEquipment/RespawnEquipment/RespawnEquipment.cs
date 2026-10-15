@@ -14,7 +14,7 @@ namespace RespawnEquipment {
         public const string PluginGUID = PluginAuthor + "." + PluginName;
         public const string PluginAuthor = "mwmw";
         public const string PluginName = "RespawnEquipment";
-        public const string PluginVersion = "1.0.0";
+        public const string PluginVersion = "1.0.1";
 
         public static ConfigFile config;
 

@@ -4,6 +4,7 @@ using RoR2BepInExPack.GameAssetPathsBetter;
 using System;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Networking;
 using static RoR2.ColorCatalog;
 
 namespace RespawnEquipment {
@@ -81,10 +82,11 @@ namespace RespawnEquipment {
         protected abstract bool ActivateEquipment(EquipmentSlot slot);
 
         protected virtual bool CheckForEquipment(On.RoR2.EquipmentSlot.orig_PerformEquipmentAction orig, EquipmentSlot self, EquipmentDef activatedEquipmentDef) {
-            if (activatedEquipmentDef == equipmentDef) {
-                return ActivateEquipment(self);
+            bool result = orig(self, activatedEquipmentDef);
+            if (NetworkServer.active && !self.equipmentDisabled && activatedEquipmentDef == equipmentDef) {
+                result = ActivateEquipment(self);
             }
-            return orig(self, equipmentDef);
+            return result;
         }
 
         public virtual void Init() {
